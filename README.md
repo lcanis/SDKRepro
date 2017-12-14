@@ -26,14 +26,16 @@ MyClient.nuspec inside MyClient-1.0.0.nupkg should look like this:
 
 This can be reproduced by the Repo as-is using the provided `pack` command-line
 
-## Actual behaviour
-
 When doing the following rename:
 ```
 mv MySDK MySdk
 ```
 
-.. the dependency is not found anymore:
+.. the behaviour should stay the same. 
+
+## Actual behaviour
+
+If the directory name is Pascal case, the dependency is not found anymore:
 
 ```
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
